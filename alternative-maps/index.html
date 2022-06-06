@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Maps homework 1</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <nav id="menu"></nav>
+   
+    
+    <div class="title-map">
+        <h1>Looking at America by its Land</h1>
+    </div>
+
+    <div class="container">
+    <div id='map'></div>
+    <div id='title' class="title">
+        <h1>Most Common Economic Sectors</h1>
+        <p>This map documents the most prevalent economic activity per state and, zooming in, per each individual county. The data is provided by the Economic Research Service
+            from the U.S. Department of Agriculture.</p>
+        <!-- <hr> -->
+        <div id="sector-legend" class="legend">
+            <!-- <h4>Median Household Income</h4> -->
+            <div><span style="background-color: #edbb8a"></span>Nonspecialized</div>
+            <div><span style="background-color: #de8a5a"></span>Recreation</div>
+            <div><span style="background-color: #b4c8a8"></span>Manufacturing</div>
+            <div><span style="background-color: #70a494"></span>Federal/State Government</div>
+            <div><span style="background-color: #008080"></span>Farming</div>
+            <div><span style="background-color: #f6edbd"></span>Mining</div>
+        </div>
+        </div>
+    </div>
+        <div class="footer">
+        <p>You can retrieve the county-level typology codes dataset <a href="https://www.ers.usda.gov/data-products/county-typology-codes.aspx">HERE</a>.</p>
+    </div>
+
+
+
+   
+    
+
+
+ <!-- map 2 -->
+ <div class="title-map">
+    <h1>America's Racial Reckoning</h1>
+    </div>
+
+    <div class="container">
+    <div id='map2'></div>
+    <div id='title' class="title">
+        <h1>Police Brutality During George Floyd's 2020 Protests</h1>
+        <p>Each dot represents an incident in which police responded violently against medics, demonstrators or the media.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>You can access the data repository with all the information related to police brutality <a href="https://github.com/2020PB/police-brutality">HERE</a>.</p>
+    </div>
+
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>

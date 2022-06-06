@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Election Maps 2020</title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+   
+        <div class="title-map">
+            <h1>Presidential Election Maps 2020</h1>
+            </div>
+        
+            <div class="container">
+            <div id='map'></div>
+            <div id='title' class="title">
+                <h1>Who Won Where?</h1>
+                <p>Click in each state, and zoom in to show the winner by county.</p>
+                </div>
+            </div>
+            <div class="footer">
+                <p>This map is a recreation of this <a href="https://www.nytimes.com/interactive/2019/11/05/us/elections/results-kentucky-governor-general-election.html">New York Times election results map.</a></p>
+            </div>
+
+
+    <div class="title-map">
+        <h1>Presidential Election Point Map</h1>
+        </div>
+    
+        <div class="container">
+        <div id='map2'></div>
+        <div id='title' class="title">
+            <h1>Who Won Where?</h1>
+            <p>Click in each state, and zoom in to show the winner by county.</p>
+            </div>
+        </div>
+        <div class="footer">
+            <h1>Datasets used</h1>
+            <ul>
+                <li>
+                <p>US Counties. Download from <a href= "https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_county_5m.zip"> U.S. Census Bureau - Cartographic Boundary Files</a></p>
+                </li>
+                <li>
+                <p>US States. Download from <a href="https://www2.census.gov/geo/tiger/GENZ2020/shp/cb_2020_us_state_5m.zip"> U.S. Census Bureau - Cartographic Boundary Files</a></p>
+                </li>
+                <li>
+                <p>US Presidential Election Results at the County Level. Download from <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/VOQCHQ"> MIT Election Data + Science Lab</a></p>
+                 </li>
+                </ul>
+        </div>
+
+    
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>
+
+
+
