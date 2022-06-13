@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Assignment 2</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  
+    <div class="title-map">
+        <h1>Where most Citi Bike trips start in NYC</h1>
+        <p>On the left, the stations from which New Yorkers rented <span style="font-size:18px; color:#f7f7f7; background-color: #014636";> 
+            more</span> versus <span style="font-size:18px; background-color: #fff7ec";>less</span> bikes
+           <br> in September 2020. On the right, a comparison with September 2021.</p>
+    </div>
+    
+
+    <div class="row-container">
+        <div class="column-container">
+            <div id='map'></div>
+        </div>
+        
+ <!-- map 2 -->
+        <div class="column-container">
+             <div id='map2'></div>
+            </div>
+        </div>
+
+
+<div class="title-map">
+        <h1>Where most Citi Bike trips end in NYC</h1>
+        <p>On the left, the stations where New Yorkers finished <span style="font-size:18px; color:#f7f7f7; background-color: #014636";> more</span> 
+            versus <span style="font-size:18px; background-color: #fff7ec";>less</span> bike trips
+           <br> in September 2020. On the right, a comparison with September 2021.</p>
+    </div>
+
+    <div class="row-container1">
+        <div class="column-container">
+            <div id='map3'></div>
+        </div>
+
+
+
+<!-- map 4 -->
+<div class="column-container">
+    <div id='map4'></div>
+   </div>
+</div>
+
+
+    <div class="footer">
+        <p>You can access the dataset about Citi Bike use in NYC <button type="button"> <a href="https://s3.amazonaws.com/tripdata/index.html">HERE</a></button></p>
+    </div>
+
+    <script type='text/javascript' src="map.js"></script>
+</body>
+</html>
