@@ -22,12 +22,12 @@ var map = new mapboxgl.Map({
           paint: { "circle-radius":
       ["interpolate", ["exponential", 2], ["zoom"],
       2, ["interpolate", ["linear"], ["get", "Total Number of Dead and Missing"],
-      0, 6,
-      170, 13
+     0, 7,
+      170, 20
       ],
       6, ["interpolate", ["linear"], ["get", "Total Number of Dead and Missing"],
-      0, 9,
-      170, 30
+      0, 11,
+      170, 35
       ],
     ],
     "circle-color": [
@@ -75,17 +75,36 @@ map.on('click', 'Missing migrants', function (e) {
   var routeName = e.features[0].properties['Migrantion route'];
   var source = e.features[0].properties['Information Source'];
   var date = e.features[0].properties['Incident Date']
-  var minmissing = e.features[0].properties['Minimum Estimated Number of Missing'].toLocaleString('en-US');
-  var mindead = e.features[0].properties['Number Dead'].toLocaleString('en-US');
-  var survivors = e.features[0].properties['Number of Survivors'].toLocaleString('en-US');
+  var minmissing;
+  if (e.features[0].properties['Minimum Estimated Number of Missing'] != null){
+    minmissing = e.features[0].properties['Minimum Estimated Number of Missing'].toLocaleString('en-US');
+  }
+  else {
+    minmissing = "None";
+  }
+  var mindead;
+  if (e.features[0].properties['Number Dead'] != null){
+    minmissing = e.features[0].properties['Number Dead'].toLocaleString('en-US');
+  }
+  else {
+    mindead = "None";
+  }
+  var survivors;
+  if (e.features[0].properties['Number of Survivors'] != null){
+    survivors = e.features[0].properties['Number of Survivors'].toLocaleString('en-US');
+  }
+  else {
+    survivors = "Unknown";
+  }
+
   var Causedeath = e.features[0].properties['Cause of Death'];
   routeName = routeName.toUpperCase();
   new mapboxgl.Popup()
     .setLngLat(e.lngLat)
     .setHTML('<h4>' + routeName + '</h4>'
         +'<p>' + date + ' ' + '</p>'
-        +'<p> <b>' +  'At least' + ' ' + mindead + ' ' +  'dead and' + ' ' + minmissing + ' ' + 'missing' + '</p>'
-        + '<p>' + survivors + ' ' + 'survivors'+ '</b></p>'
+        +'<p> <b>' + mindead + ' ' +  'dead and' + ' ' + minmissing + ' ' + 'missing' + '</p>'
+        + '<p>' + survivors + ' ' + 'number of survivors'+ '</b></p>'
         + '<p>' + 'Cause of death:'+ ' ' + Causedeath + '</p>'
         + '<p>' +  'Source:' + ' ' + source + '</p>')
     .addTo(map);
