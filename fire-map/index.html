@@ -1,0 +1,81 @@
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Fire Map</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+        <nav id="menu"></nav>  
+        
+        <div class="title-map">
+            <br>
+            <h1>Nevada's County Where any Wildfire Could be Disastrous</h1>
+        </div>
+
+    
+        <div class="container">
+        <div id='map'></div>
+        <div id='title' class="title">
+            <h1>Wildfire Hazard Potential</h1>
+            <p>This map highlights those counties where a wildfire would be more difficult to control and suppress. 
+                The percentage of houses that would be directly exposed to fire is also mentioned.
+            </p>
+            <!-- <hr> -->
+            <div id="content-legend" class="legend">
+                <!-- <h4>Median Household Income</h4> -->
+                <div><span style="background-color: #fef0d9"></span>Very Low [Less than 200]</div>
+                <div><span style="background-color: #fdcc8a"></span>Low [200 - 700]</div>
+                <div><span style="background-color: #fc8d59"></span>Moderate [700 - 1,800]</div>
+                <div><span style="background-color: #e34a33"></span>High [1,800 - 4,700]</div>
+                <div><span style="background-color: #b30000"></span>Very High [More than 4,700]</div>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+        <p>You can access here the full <a href="https://www.fs.usda.gov/rds/archive/Catalog/RDS-2020-0016">wildfire risk dataset.</a> 
+                This map was crated using the Jenks natural breaks classification method, a data clustering method designed to determine 
+                the best arrangement of values into different classes.</p></div>
+                <br>
+                <br>
+            
+
+
+        <div class="text-story">
+            <p><b>By Patricia Martínez Sastre</b></p>
+
+                <p>June 26th, 2022 </p>
+
+            <p>Elko County has more rural communities located in high and extreme wildfire hazard areas than anywhere else in Nevada,
+                and the worst hazard potential in the country.  
+                <br>
+                <br>
+                Here many residents and their homes are not prepared to survive wildfire, according to
+                <a href="https://extension.unr.edu/publication.aspx?PubID=3932">a recent study</a> by the University of Nevada from 2016.
+                <br>
+                <br>
+                More than half of Elko's over 20,600 houses would face a direct exposure to fire in case of an arson, concluded
+                the US Department of Agriculture on its <a href="https://www.fs.usda.gov/rds/archive/Catalog/RDS-2020-0016">wildfire risk dataset.</a>
+                <br>
+                <br>
+                Other risky factors are Elko's vegetation -asagebrush and rabbitbrush- as well as constant summer 
+                thunderstorms and dry lightning strikes in the area. <a href="https://www.rci-nv.com/reports/elko/section03.html">Fire records</a>
+                show that 64% of prior arsons whose cause was known were due to lightning.</p> 
+            <br>
+            <br>
+    </div>
+
+
+
+
+
+        
+
+    <script type='text/javascript' src="map.js"></script>
+</body>
+
+</html>
